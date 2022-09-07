@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-basic
+  namespace: default
+  labels:
+    app: pod
+spec:
+  containers:
+  - name: mynginx
+    image: docker.io/library/nginx:1.23.1
+  - name: mybusybox
+    image: docker.io/library/busybox:1.35.0

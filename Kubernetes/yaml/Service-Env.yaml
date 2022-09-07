@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment      
+metadata:
+  name: service-env
+  namespace: default
+spec: 
+  replicas: 3
+  selector:
+    matchLabels:
+      app: service-env
+  template:
+    metadata:
+      labels:
+        app: service-env
+    spec:
+      containers:
+      - name: nginx
+        image: docker.io/library/nginx:1.23.1
+        ports:
+        - containerPort: 80

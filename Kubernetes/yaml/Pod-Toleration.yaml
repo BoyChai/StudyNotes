@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-toleration
+  namespace: default
+  labels:
+    app: pod
+spec:
+  containers:
+  - name: nginx
+    image: docker.io/library/nginx:1.23.1
+  tolerations:      		# 添加容忍
+  - key: "region"        	# 要容忍的污点的key
+    operator: "Equal"  	# 操作符equal等于
+    value: "beijing"   	# 容忍的污点的value
+    effect: "NoSchedule"  # 添加容忍的规则，这里必须和标记的污点规则相同

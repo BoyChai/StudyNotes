@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: ReplicaSet   
+metadata:
+  name: pc-replicaset
+  namespace: default
+spec:
+  replicas: 3
+  selector: 
+    matchLabels:
+      app: nginx-pod
+  template:
+    metadata:
+      labels:
+        app: nginx-pod
+    spec:
+      containers:
+      - name: nginx
+        image: docker.io/library/nginx:1.23.1

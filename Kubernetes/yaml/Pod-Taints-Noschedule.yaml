@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-taints-noschedule
+  namespace: default
+  labels:
+    app: pod
+spec:
+  containers:
+  - name: nginx
+    image: docker.io/library/nginx:1.23.1

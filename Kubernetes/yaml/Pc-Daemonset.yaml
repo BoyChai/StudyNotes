@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: DaemonSet      
+metadata:
+  name: pc-daemonset
+  namespace: default
+spec: 
+  selector:
+    matchLabels:
+      app: nginx-pod
+  template:
+    metadata:
+      labels:
+        app: nginx-pod
+    spec:
+      containers:
+      - name: nginx
+        image: docker.io/library/nginx:1.23.1

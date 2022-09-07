@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-liveness-exec
+  namespace: default
+spec:
+  containers:
+  - name: nginx
+    image: docker.io/library/nginx:1.23.1
+    ports: 
+    - name: nginx-port
+      containerPort: 80
+    livenessProbe:
+      exec:
+        command: ["/bin/cat","/tmp/hello.txt"] # 执行一个查看文件的命令

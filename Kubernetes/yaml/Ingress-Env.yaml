@@ -1,0 +1,99 @@
+---
+apiVersion: apps/v1
+kind: Deployment      
+metadata:
+  name: ingress-env-nginx
+  namespace: default
+spec: 
+  replicas: 3
+  selector:
+    matchLabels:
+      ingress-env: nginx-pod
+  template:
+    metadata:
+      labels:
+        ingress-env: nginx-pod
+    spec:
+      containers:
+      - name: nginx
+        image: docker.io/library/nginx:1.23.1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ingress-env-httpd
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      ingress-env: httpd-pod
+  template:
+    metadata:
+      labels:
+        ingress-env: httpd-pod
+    spec:
+      containers:
+      - name: httpd
+        image: docker.io/library/httpd:2.4.54
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ingress-env-tomcat
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      ingress-env: tomcat-pod
+  template:
+    metadata:
+      labels:
+        ingress-env: tomcat-pod
+    spec:
+      containers:
+      - name: tomcat
+        image: docker.io/library/tomcat:8.5-jre10-slim
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ingress-env-nginx-svc
+  namespace: default
+spec:
+  selector:
+    ingress-env: nginx-pod
+  clusterIP: 10.97.2.1 # service的ip地址，如果不写，默认会生成一个
+  type: ClusterIP
+  ports:
+  - port: 80  # Service端口
+    targetPort: 80 # pod端口
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ingress-env-httpd-svc
+  namespace: default
+spec:
+  selector:
+    ingress-env: httpd-pod
+  clusterIP: 10.97.2.2 # service的ip地址，如果不写，默认会生成一个
+  type: ClusterIP
+  ports:
+  - port: 80  # Service端口
+    targetPort: 80 # pod端口
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ingress-env-tomcat-svc
+  namespace: default
+spec:
+  selector:
+    ingress-env: tomcat-pod
+  clusterIP: 10.97.2.3 # service的ip地址，如果不写，默认会生成一个
+  type: ClusterIP
+  ports:
+  - port: 80  # Service端口
+    targetPort: 8080 # pod端口

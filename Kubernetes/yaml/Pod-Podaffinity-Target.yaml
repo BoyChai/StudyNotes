@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-podaffinity-target
+  namespace: default
+  labels:
+    podenv: pro #设置标签
+spec:
+  containers:
+  - name: nginx
+    image: docker.io/library/nginx:1.23.1
+  nodeName: work1.host.com # 将目标pod名确指定到work1.host.com上

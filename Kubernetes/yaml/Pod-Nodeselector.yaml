@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-nodeselector
+  namespace: default
+spec:
+  containers:
+  - name: nginx
+    image: docker.io/library/nginx:1.23.1
+  nodeSelector: 
+    nodeenv: pro2 # 指定调度到具有nodeenv=pro标签的节点上

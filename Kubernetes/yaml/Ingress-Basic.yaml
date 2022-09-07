@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress 
+metadata:
+  name: ingress-basic
+spec:
+  tls:
+    - hosts:
+      - nginx.host.com
+      - apache.host.com
+      - tomcat.host.com
+      secretName: tls.secret # 指定证书配 
+  ingressClassName: nginx
+  rules:
+  - host: "nginx.host.com"
+    http: 
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: ingress-env-nginx-svc
+            port:
+              number: 80
+  - host: "apache.host.com"
+    http: 
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: ingress-env-httpd-svc
+            port:
+              number: 80
+  - host: "tomcat.host.com"
+    http: 
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: ingress-env-tomcat-svc
+            port:
+              number: 80

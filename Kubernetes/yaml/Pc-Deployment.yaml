@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment      
+metadata:
+  name: pc-deployment
+  namespace: default
+spec: 
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-pod
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 33%
+      maxUnavailable: 33%
+  template:
+    metadata:
+      labels:
+        app: nginx-pod
+    spec:
+      containers:
+      - name: nginx
+        image: docker.io/library/nginx:1.23.1
