@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>超链接</title>
+	</head>
+	<body>
+		<!-- 链接到百度 -->
+		<!-- href属性，表示指定链接路径地址 -->
+		<a href="https://www.baidu.com">跳转百度</a>
+		<br>
+		<!-- 链接也可以设置成网络路径，也可以是一个本地路径 -->
+		<a href="009-图片.html">跳转009</a>
+		<!-- 超链接的特点：鼠标停留在超链接上自动变成小手，超链接自动添加下划线 -->
+		<!-- 图片也可以做超链接如下 -->
+		<a href="https://www.baidu.com">
+			<!-- 标签嵌套使用 -->
+			<img src="./img/bg.jpeg" width="100px" title="跳转百度" />
+		</a>
+		<!-- target属性，默认为当前窗口-->
+		<!-- 
+			_blank 新窗口
+			_self 当前窗口
+			_parent 当前窗口的父窗口
+			_top 当前窗口的顶级窗口
+		 -->
+		<a href="https://www.baidu.com" target="_self">target当前窗口</a>
+		<a href="https://www.baidu.com" target="_blank">target新窗口</a>
+		<a href="https://www.baidu.com" target="_parent">target当前窗口的父窗口</a>
+		<a href="https://www.baidu.com" target="_top">target当前窗口的顶级窗口</a>
+		<br>
+		
+		<!-- 一个窗口中的内部窗口 -->
+		<iframe src="https://www.baidu.com"></iframe>
+	</body>
+</html>
