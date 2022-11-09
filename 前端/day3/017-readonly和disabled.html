@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>readonly和disabled</title>
+	</head>
+	<body>
+		<!-- readonly是只读并且可以交给服务器 -->
+		<!-- disabled也是只读但是不会提交 -->
+		<form action="./017-readonly和disabled">
+			机构代码: <input type="text" name="orgcode" value="111111111" readonly />
+			<br>
+			用户代码: <input type="text" name="usercode" value="22222222" disabled />
+			<br>
+			<input type="submit" value="提交">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单</title>
+	</head>
+	<body>
+		<!-- 
+			表单的作用:
+			发送请求,并携带数据给服务器.
+			表单和超链接有共同的特征,都可以向服务器发送请求,
+			只不过超链接是用户直接点击发送请求,不能填写数据.
+			而用户使用表单提交的时候,不但可以发送请求,而且还可以在请求中携带数据.
+			
+			表单最主要的作用就是收集用户的信息
+			
+			表单对应的英语单词是form
+			
+			定义一个表单
+			<form>
+				表单项1
+				表单项2
+			</form>
+			一个网页可以有多个表单对象
+			
+			form标签的action属性
+			这个属性和超链接的href相同,都需要填写url
+		 -->
+		 <!-- 超链接 -->
+		 <a href="https://www.baidu.com">baidu</a>
+		 
+		 <!-- 表单 -->
+		 <form action="https://www.baidu.com">
+			 <!-- 所有能提交表单的按钮 type必须是submit -->
+			 <input type="submit" value="百度">
+			 <!-- 按钮 -->
+			<button type="submit">按钮</button>
+		 </form>
+		 <br>
+		 
+		 <!-- submit提交按钮放在form外面是不行的 -->
+		 <input type="submit" value="百度(外)">
+		 
+	</body>
+</html>
