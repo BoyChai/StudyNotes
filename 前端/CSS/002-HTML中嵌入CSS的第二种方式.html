@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML中嵌入CSS样式的第二种方式</title>
+		<!-- head标签中使用style标签，定义内部样式块对象 -->
+		<style type="text/css">
+			/* 这里是CSS注释 */
+			/* 在CSS代码块里面注释和java相同 */
+			
+			/* 
+			样式语法如下： 
+			选择器 {
+				样式名: 样式值;
+				样式名: 样式值;
+				样式名: 样式值;
+				样式名: 样式值;
+				样式名: 样式值;
+				样式名: 样式值;
+				样式名: 样式值;
+				样式名: 样式值;
+				......
+			}
+			
+			CSS中常见的选择器，最常见的三种选择器：
+				标签选择器
+				id选择器
+				class选择器
+			*/
+		   
+		   /* 
+		   标签选择器:
+			写法
+			标签名 { }
+			
+			在此页面所有对应的标签都会有样式
+			*/
+		   div {
+			   background-color: red;
+			   width: 100px;
+			   height: 100px;
+			   border-color: black;
+			   border-style: solid;
+			   border-width: 10px;
+		   }
+		   
+		   /* 
+		   ID选择器：
+			写法：
+				#id名 { }
+				
+			在标签的属性里面添加"id=id名称"，id名称应该在本页面唯一
+		   */
+		  #div2 {
+			  background-color: saddlebrown;
+			  width: 100px;
+			  height: 100px;
+			  border-color: black;
+			  border-style: solid;
+			  border-width: 10px;
+		  }
+		  
+		  /*
+		   class选择器：
+		  	写法：
+				.class名 { }
+					
+			在标签的属性里面添加"class=class名称"，class可以选择多个标签，每个class名可以在任何一个标签里面用
+		   */
+		   .mydiv {
+		  			  background-color: blue;
+		  			  width: 100px;
+		  			  height: 100px;
+		  			  border-color: black;
+		  			  border-style: solid;
+		  			  border-width: 10px;
+		  }
+		  
+		  
+		  /* 三种标签选择器的优先级为： id选择器>class选择器>标签选择器 */
+		
+		  
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<div id="div2"></div>
+		<div id="div3" class="mydiv"></div>
+		<div id="div4" class="mydiv"></div>
+	</body>
+</html>
