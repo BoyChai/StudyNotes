@@ -1,0 +1,9 @@
+1.JavaScript概述
+	简称JS
+	是一种脚本语言，JavaScript的目标程序是以文本的形式保存
+	JavaScript运行在在浏览器中，浏览器中有执行js代码的内核
+
+2.JavaScript包括三大块：ECMAScript、DOM、BOT
+	ECMAScript是ECMA定制的262标准，JavaScript和JScript都遵守这个标准,ECMAScript是JavaScript的核心语法
+	DOM编译是通过JavaScript对HTML中的dom节点进行操作，DOM是有规范的，DOM规范是w3c定制的
+	BOM编程是对浏览器本身操作，例如前进后退地址栏关闭窗口弹窗等。由于浏览器有不同的商家所造，所以BOM缺少规范，一般只是有一个默认的行业规范

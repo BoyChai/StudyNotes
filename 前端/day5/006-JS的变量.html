@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS的变量</title>
+		<script type="text/javascript">
+			/* 
+			JAVA:
+			 怎么声明?
+				int i;
+				double d;
+				String s;				
+			 怎么赋值?
+				i = 100;
+				d = 3.14;
+				s = "abc";
+			 一行上能声明多个变量吗?
+			 int a,b,c = 300;
+			 a b c都是int类型
+			 a和b没有赋值
+			 c赋值300
+			 
+			 重点:
+				JAVA语言是一种强类型语言,有编译阶段,属于编译型语言.JAVA语言在编译阶段确定变量数据类型
+				也就是说程序还没有运行呢,变量的数据类型就已经确定下来了,并且该变量的数据线类型在这一生中,永远不可变.
+			JS:
+			 怎么声明?
+				var 变量名;
+			 怎么赋值?
+				变量名 = 值;
+			 一行能声明多个变量吗?
+				var a,b,c = 300;
+				声明三个变量,c=300,a b没有值,系统默认赋值undefined,undefined在js中一个具体的值,这个值就是undefined
+				
+			 重点:
+				JS是一种弱类型语言,没有编译阶段,直接浏览器打开解析执行.
+				在JS声明变量时不需要指定变量的数据类型,程序在运行过程中,赋什么值就是什么类型,并且变量数据类型是可变的.
+			 
+			 */
+			var i
+			alert(i)	//没赋值的话就是undefined	
+			
+			var x = "undefined"
+			alert(x)	//这里的"undefined"不是undefined,他是一个字符串
+			
+			var k = 100	// 声明时同时赋值
+			alert(k+100)
+			
+			var a,b,c=100 //一行可以声明多个变量
+			alert(a)
+			alert(b)
+			alert(c)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

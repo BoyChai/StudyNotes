@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS的数据类型</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/* 
+				关于JS的数据类型？
+					1、JS中声明变量不需要指定数据类型，为什么还要学习数据类型呢？
+						例如: var i = 100; var d = 3.14;
+						在JS中学习数据类型也不是为了声明变量，是为了理解JS程序中的底层原理。
+						我们起码要知道100是什么类型，3.14是什么类型，怎么存储....
+					2、ES6之前JS的数据类型包括6种：
+						Undefined
+						Number
+						String
+						Boolean
+						Null
+						Object
+						其中，Undefined、Number、String、Boolean、Null都属于原始类型(或者叫做基本数据类型)
+						其中，Object叫做引用类型，(或者叫做对象类型)
+						
+					3、在ES6之后引入了其他新的类型，知道就行:
+						Symbol
+						BigInt
+						注意：ES6是八种类型，ES6之前是6种类型
+					4、typeof运算符(非常重要*****)
+						typeof运算符可以在js代码中动态获取变量的数据类型
+						typeof的语法格式： typeof 变量名
+						typeof的运算结果是以下6个字符串之一：
+							"undefined"
+							"number"
+							"string"
+							"boolean"
+							"object"
+							"function"
+							并且以上六个字符串全部都是小写的
+					5、在JS中判断两个字符串是否相等、应该使用"==",JS函数中没有equals函数！
+					6、关于JS的比较官方的参考文档？
+					火狐浏览器就是他家的
+					https://developer.mozilla.org/en-US/docs/Web/API
+			 */
+			// sum的作用是用来计算两个数字的和，要求xy都必须是数字类型，如果不是则就提示错误信息
+			function sum(x,y){
+				// 有一串代码计算x和y变量的数据类型
+				if(typeof x == "number" && typeof y == "number") {
+					console.log(x+y)
+					return x+y;
+				}
+				// 程序执行到这里表示x和y不都是数字
+				alert("请注意函数运行的大小写")
+				
+			}
+			
+			var i;
+			// undefined
+			alert(typeof i)
+			
+			var k = 3.14;
+			// number
+			alert(typeof k)
+			
+			var a=100;
+			// number
+			alert(typeof a)
+			
+			var username = "zhangsan"
+			// string
+			alert(typeof username)
+			
+			var sex = true
+			// boolean
+			alert(typeof sex)
+			
+			// null属于Null类型，但是typeof的运算结果是"object"
+			// 一定要注意：null这个值是基本数据类型，但是typeof运算符的运算结果是"object"
+			var v = null;
+			// object
+			alert(typeof v)
+			
+			var b = new Object()
+			// object
+			alert(typeof b)
+			
+			
+			// function
+			alert(typeof sum)
+			
+		</script>
+		<input type="button" value="计算两个数的和" onclick="sum('abv','def')">
+		<br>
+		<input type="button" value="计算两个数的和" onclick="sum(12,23)">
+	</body>
+</html>
