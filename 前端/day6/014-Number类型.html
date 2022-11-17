@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Number类型</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+				Number类型
+					1、Number类型属于原始类型
+					2、Number类型都有哪些值？
+						-1
+						0
+						1
+						2
+						3
+						3.14
+						2.0
+						NaN
+						Infinity
+						....
+					3、NaN？
+						Not a Number，表示不是一个数字
+						但Nan是一个值.
+						它属于Number类型.
+					4、什么情况下结果是一个NaN？
+						当一个数学表达式的运算结果本应该返回一个数字，
+						但是最终无法返回一个数字的时候，结果是NaN
+						
+					5、Infinity是无穷大，当除数是0的时候，最终结果是无穷大(Infinity)
+					
+					6、强调：
+						JavaScript当中的Number类型代表了java中的：byte short int long float double
+					
+					7、在Number类型这块有一个函数叫做"isNaN()"函数,这个函数最终返回布尔类型，
+					返回true表示不是一个数字，返回false表示是一个数字/
+						isNaN: is Not a Number
+						true：表示不是一个数字
+						false：表示是一个数字
+						
+						
+						isNaN(数据)：这个函数有一个特点，他会首先尝试将“数据”转换成
+						数字，如果失败了，则结果就是true。转换为数字成功了，那么就是false。
+					
+					8、在Number类型这块还有一个函数叫做：Number()函数，这个函数作用是可以将不是
+							数字类型的数据转换成数字类型的数据。
+							
+			*/
+		   console.log(1)
+		   var k = NaN;
+		   console.log(typeof k); //number	
+		   
+		   console.log(2)
+		   var result = 100 / "中";
+		   console.log(result)	//NaN
+		   
+		   console.log(3)
+		   var v = Infinity
+		   console.log(typeof v)	
+		   console.log(v)
+		   
+		   // 在JavaScript中当+可以是字符串拼接，也可以是求和。
+		   // 当有一个值是字符串的话就会进行字符串拼接
+		   console.log(4)
+		   var x = 100 + "中";
+		   console.log(x)
+		   
+		   function sum(x,y) {
+			   // console.log("================================")
+			   // console.log(x)
+			   // console.log(typeof x)
+			   // console.log(isNaN(x))
+			   // console.log("================================")
+			   // console.log(typeof y)
+			   // console.log(isNaN(y))
+			   // console.log(y)
+			   // console.log("================================")
+			   if (isNaN(x) || isNaN(y)){
+				   alert("对不起参与求和的数据必须都是数字")
+			   } else {
+				   alert(Number(x)+Number(y))
+			   }
+		   }
+		   console.log(5)
+		   alert(Number("123"))
+		   console.log(Number("中国"))
+		   
+		   console.log(6)
+		   var s1 = "123.111"
+		   // 需求：将以上的字符串"123.111"，转换成数字，并且只取整数位
+		   var num = parseInt(s1)	// 不会四舍五入，直接取整位数 
+		   console.log(num)
+		   console.log(num + 100)
+		   
+		   console.log(7)
+		   var s2 = "123.456哈哈";		// 哈哈不能放前面，否则返回NaN
+		   var num2 = parseInt(s2)
+		   console.log(num2)
+		   
+		   // 向上取整
+		   // 使用JS内置的Math这个数字类，Math数学类中有一个函数叫做ceil()
+		   console.log(8)
+		   console.log(Math.ceil(123.001))
+		   console.log(Math.ceil(123.000))
+		   
+		</script>
+		<input type="button" value="sum" onclick="sum(true,100)">
+		<input type="button" value="sum" onclick="sum('中国',100)">
+		<input type="button" value="sum" onclick="sum('123',100)">
+	</body>
+</html>
