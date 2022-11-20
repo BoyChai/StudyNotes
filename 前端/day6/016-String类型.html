@@ -47,7 +47,20 @@
 			console.log("username=zhangsan&password=123".indexOf("=")) //8
 			console.log("username=zhangsan&password=123".lastIndexOf("=")) //26
 			
+			//拆分字符串返回一个数组
+			var arr = "1990-03-09".split("-")
+			for (var i = 0 ; i < arr.length ;i ++){
+				console.log(arr[i])
+			}
 			
+			// 对于substr和substring来说，都有两个参数会有什么区别？
+			// substr(starIndex,Length)
+			// substring(starIndex,endindex)
+			console.log("abcdef".substr(2,3))  	 //cde
+			console.log("abcdef".substring(2,3)) //c
+			
+			console.log("ABCdef".toLowerCase())	//abcdef
+			console.log("ABCdef".toUpperCase()) //ABCDEF 
 		</script>
 	</body>
 </html>
