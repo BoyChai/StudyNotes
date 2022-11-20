@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS中怎么定义类new对象调方法</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+				1、在JS中怎么定义类？包括两种方式
+					第一种方式：
+						function 类名(形式参数列表) {
+							this.属性名 = 参数
+							this.属性名 = 参数
+							this.方法名 = function() {
+								
+							}
+						}
+					第二种方式：
+						类名 = function(形式参数列表) {
+							this.属性名 = 参数
+							this.属性名 = 参数
+							this.方法名 = function() {
+								
+							}
+						}
+			*/
+		   // 既是一个函数，同时又是一个定义的类，函数名称是:sayHello，类名是:sayHello
+			function sayHello() {
+				
+			}
+			
+			// 关键看你怎么调用，如果没有使用new运算符调用，那就表示普通函数调用，不会在堆中new对象。
+			sayHello()
+			
+			// 使用new运算符去调用这个函数，显然是把它当作一个类来看待，这会导致浏览器的堆中开辟一个新对象。
+			var obj = new sayHello()
+			var obj2 = new sayHello()
+			
+		</script>
+	</body>
+</html>
