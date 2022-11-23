@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS中的常用事件</title>
+		<style type="text/css">
+			input {
+				border: 1px solid black;
+				height: 50px;
+				width: 300pxs;
+			}
+			#mouseDiv {
+				border: 1px solid black;
+				background-color: aqua;
+				width: 300px;
+				height: 300px;
+			}
+		</style>
+	</head>
+	<!-- 
+		load事件
+			1、load事件不是在页面加载过程中触发的
+			2、load事件是在页面中所有的元素加载完毕之后才发生的
+	 
+	 -->
+	<body onload="console.log('加载完毕')">
+		<script type="text/javascript">
+			/*
+			JS的常用事件
+				blur失去焦点
+				focus获得焦点
+				
+				click鼠标单机
+				dblclick鼠标双击
+				
+				keydown键盘按下
+				keyup键盘弹起
+				
+				mousedown鼠标按下
+				mouseover鼠标经过
+				mousemove鼠标移动
+				mouseout鼠标离开
+				mouseup鼠标弹起
+				
+				submit表单提交
+				reset表单重置
+				
+				select文本被选定
+				change下拉列表选中项改变，或者文本框内容改变
+				load页面加载完毕
+				
+				提醒：任何一个事件都有对应的事件句柄。事件句柄是在事件名称前添加no就行。
+				
+			*/
+		   
+		</script>
+		
+		测试失去焦点事件：<input type="text" onblur="console.log('失去了焦点')">
+		<br>
+		测试获得焦点事件：<input type="text" onfocus="console.log('获取了焦点')">
+		<br>
+		测试click事件：<input type="button" value="click事件" onclick="console.log('单击')">
+		<br>
+		测试dblclick事件：<input type="button" value="dblclick事件" ondblclick="console.log('双击')">
+		<br>
+		测试keydown事件：<input type="text" onkeydown="console.log('keydown....')">
+		<br>
+		测试keyup事件：<input type="text" onkeyup="console.log('keyup....')">
+		<br>
+		测试mouse相关事件：
+			<div id="mouseDiv"
+				onmousedown="console.log('鼠标按下')"
+				onmouseover="console.log('鼠标经过')"
+				onmousemove="console.log('鼠标移动')"
+				onmouseout="console.log('鼠标离开')"
+				onmouseup="console.log('鼠标弹起')"
+			></div>
+			
+		测试表单的提交和重置事件：
+		<form onsubmit="alert('表单提交了')" onreset="console.log('表单重置了')">
+			<input type="submit" value="提交">
+			<input type="reset" value="重置">
+		</form>
+		测试选中文本：
+		<textarea cols="30" rows="10" onselect="console.log('文本被选中了')"></textarea>
+		<br>
+		测试change事件：
+		<select onchange="console.log('下拉列表更变')">
+			<option value="">----请选择你的学历-----</option>
+			<option value="gz">高中</option>
+			<option value="cz">初中</option>
+		</select>
+	</body>
+</html>

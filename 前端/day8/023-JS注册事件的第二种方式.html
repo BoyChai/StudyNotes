@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS注册事件的第二种方式</title>
+	</head>
+	<body>
+		<input type="button" value="hello" id="hellobtn" / >
+		<script type="text/javascript">
+			function sum(){
+				console.log("sum function invoke!")
+			}
+			// 根据id获取button对象
+			var mybtn = document.getElementById("hellobtn")
+			mybtn.onclick = sum
+			
+			// 使用匿名函数
+			mybtn.onclick = function() {
+				console.log("我是一个回调函数，并且我没名字")
+			}
+		</script>
+	</body>
+</html>

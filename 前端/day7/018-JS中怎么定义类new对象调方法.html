@@ -37,6 +37,44 @@
 			var obj = new sayHello()
 			var obj2 = new sayHello()
 			
+			//定义一个员工类
+			Emp = function (empon,ename,sal){
+				// 属性
+				this.empon = empon
+				this.ename = ename
+				this.sal = sal
+				
+				// 方法
+				this.work = function(){
+					console.log(this.ename + " is working!!!")
+				}
+				
+			}
+			
+			//创建对象
+			var e = new Emp()
+			e.work()
+			var e2 = new Emp(1111)
+			e2.work()
+			var e3 = new Emp(2222,"KING")
+			e3.work()
+			var e4 = new Emp(3333,"SMITH",800)
+			e4.work()
+			
+			// 给Emp动态扩展方法
+			 Emp.prototype.getSal = function(){
+				 return this.sal
+			 }
+			 console.log(e4.getSal())
+			 
+			 // 访问一个对象的属性
+			 console.log("e4.empno = "+e4.empon)
+			 console.log("e4.ename = "+e4.ename)
+			 console.log("e4.sal = "+e4.sal)
+			 // 也可以这样
+			 console.log("e4.empno = "+e4["empon"])
+			 console.log("e4.ename = "+e4["ename"])
+			 console.log("e4.sal = "+e4["sal"])
 		</script>
 	</body>
 </html>
