@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Array是一个数组类型</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+				关于JS中的数组
+					1、怎么创建数组对象
+					2、怎么遍历数组
+					3、怎么修改数组中的某个元素
+					4、怎么读取数组中的某个元素
+					....
+			*/
+		   // 创建数组的第一种方式
+		   var a = [];	//创建一个长度为0的数组对象
+		   
+		   // JS中数组的元素类型可以不一致
+		   var a2 = [12,3,4,5,6,7,false,true]
+		   
+		   // JS中的数组长度是可变的
+		   console.log(a2[0])
+		   console.log(a2[a2.length- 1 ])
+		   // 创建数组的第二种方式
+		   a2[100] = "asd"
+		   console.log(a2.length)
+		   console.log(a2[100]) //"asd"
+		   console.log(a2[99]) //undefined
+		   
+		   // 创建数组的第二种方式
+		   var arr1 = new Array()  
+		   console.log(arr1.length)  //0
+		   var arr2 = new Array(3)  
+		   console.log(arr2.length)  //3
+		   var arr3 = new Array(1,2,3,4,5,6,7) 
+		   console.log(arr3.length) //7
+		</script>
+	</body>
+</html>
