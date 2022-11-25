@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>操作div和span</title>
+		<style type="text/css">
+			#div1{
+				background-color: burlywood;
+				border: 1px solid red;
+				width: 200px;
+				height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.onload = function(){
+				var btn = document.getElementById("btn")
+				var div1 = document.getElementById("div1")
+				btn.onclick = function(){
+					// 通过元素的innerHTML属性来设置对象的内容
+					// innerHTML是属性不是方法
+					// innerHTML属性会将后面的字符串当作一段HTML代码解释并执行
+					// div1.innerHTML = "<font color='red'>用户名不能为空</font>"
+					// 这个写入的内容会当作字符串
+					div1.innerText = "<font color='red'>用户名不能为空</font>"
+				}
+			}
+			
+		</script>
+		<input type="button" id="btn" value="设置div中的内容">
+		<!-- div独占一行 -->
+		<div id="div1">
+			
+		</div>
+		<!-- span的大小会随着span中的内容多少而变化 -->
+		<span id="span1">
+			
+		</span>
+	</body>
+</html>
