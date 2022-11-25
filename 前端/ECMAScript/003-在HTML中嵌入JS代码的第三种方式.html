@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>在HTML中嵌入JS代码的第三种方式</title>
+		<script type="text/javascript" src="js/1.js"></script>
+		<!-- 二次引入，这个操作没有意义，测试结果：执行两遍JS的代码 -->
+		<script type="text/javascript" src="js/1.js"></script>
+		<!-- 三次引入，脚本块如果引入了文件，则不会执行脚本块下面的内容 -->
+		<script type="text/javascript" src="js/1.js">
+			alert("hello 三次引入")			//这里代码不会被执行
+			/* 多行注释 */
+			// 单行注释
+		</script>
+		
+	</head>
+	<body>
+		
+	</body>
+</html>

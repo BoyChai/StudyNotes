@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>在HTML中嵌入JS代码的第一种方式</title>
+	</head>
+	<body>
+		<!-- 需求，用户点击这个按钮弹出一个对话框并显示"hello,world" -->
+		<!-- JavaScript是一种事件驱动型的语言，通常都是在发生某个事件的时候去执行某段代码 -->
+		<!-- 事件包括很多，例如鼠标单击事件click等。并且在JavaScript当中任何一个事件都有对应的事件句柄。例如click对应的事件句柄是onclick -->
+		<!-- 所有的事件句柄都是以标签的属性形式存在。例如一下input button就有一个onclick这样的属性 -->
+		<!-- 只要有用户点击了下面的这个按钮对象，此时按钮对象发生了鼠标单击事件，那么注册在onclick事件句柄当中的js代码会被执行！onclick后面代码实际上是浏览器进行调用执行 -->
+		<!-- onclick="后面的代码"并不是在浏览器的时候就会执行，浏览器打开的时候，只是将这个代码注册给onclick事件句柄了。等待该按钮的click，只要发生，后面代码会被事件监听器调用 -->
+		<!-- 事件发生需要三要素：事件源，事件，监听器 -->
+		<!-- 在JS中怎么使用代码弹窗？ -->
+		<!-- 	在JS中有内置的BOM对象，可以直接拿来使用，全部小学：window -->
+		<!-- 	其中window对象有一个方法函数叫做alert，这个函数专门用来弹出对话框！ -->
+		<!-- JS语句可以用";"结尾也可以不用";"结尾 -->
+		<input type="button" value="hello" onclick="window.alert('hello,world')" />
+		<br>
+		<!-- window可以省略不写 -->
+		<input type="button" value="hello" onclick="alert('hello,world')" />
+	</body>
+</html>

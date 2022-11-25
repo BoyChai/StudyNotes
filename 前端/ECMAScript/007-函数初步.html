@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>函数初步</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/* 
+			JavaScriptdan当中的函数:
+			 function 函数名(形式参数列表){
+				 函数体
+			 }
+			 
+			 例如:
+				function sum(a,b) {
+					return a+b;
+				}
+				
+				函数名:sum
+				形式参数列表是: a和b
+			还有一种写法如下:
+				sum = function(a,b) {
+					return a+b;
+				}
+			
+			JS中的函数返回值类型是不需要指定的,因为可以返回任何类型的数据.没有限制.
+			
+			关于JS的调试:
+				首选方案是:alert(),在程序某个位置alert弹出某个变量的值,看看是否是你需要的.
+				
+				另外一种是采用浏览器自带调试插件,f12
+					f12这个插件中比较重要的面板:
+						控制台
+						查看器
+						网络
+					掌握以上三个面板!!!!
+					
+			 */
+			function sum() {
+				alert("sum函数执行了");
+			}
+			// sum()
+			
+			// 定义一个函数给input事件触发
+			function sayHello(username) {
+				alert("欢迎"+username+"光临")
+			}
+		</script>
+		<input type="button" value="欢迎光临" onclick="sayHello('张三')">
+	</body>
+</html>

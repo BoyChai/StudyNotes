@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>捕捉回车键</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+				给id=username的节点绑定keydown事件
+				后面的这个回调函数是我们负责编写的，但是调用者的监听器。
+				监听器调用这个回调函数的时候会传过来一个事件对象
+				如果你需要使用的话可以接收这个对象，如果不需要则可以忽略，function(y)的y这个值就是用来接收对象的对象
+			*/
+		   
+			
+			window.onload = function(){
+				// 使用keydown来接收内容
+				document.getElementById("username").onkeydown = function(y){
+					// 捕捉键值
+					if(y.key=="Enter"){
+						console.log("登录")
+					}
+				}
+			}
+		</script>
+		用户名：<input type="text" id="username">
+		
+	</body>
+</html>

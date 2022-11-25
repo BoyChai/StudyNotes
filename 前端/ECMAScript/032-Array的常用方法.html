@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Array的常用方法</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 创建一个长度为0的对象
+			var a = [];
+			
+			console.log(a.length)
+			
+			// 添加元素
+			a.push(100);
+			a.push(200);
+			a.push(300);
+			a.push(10);
+			a.push(20);
+			
+			console.log(a.length) //5
+			
+			a = [1,2,3];
+			// push方法：向数组中添加一个元素，并且加到末尾
+			a.push(false);
+			for (var i in a){
+				console.log(a[i])
+			}
+			
+			console.log(a.length)	// 4
+			// pop是移除最后一个值，并且-1长度
+			console.log(a.pop())	// false
+			console.log(a.length)	// 3
+			
+			// 注意：数组的push和pop方法联合起来，实际上是模拟了栈数结构！
+			var arr = []
+			arr.push(1)
+			arr.push(2)
+			arr.push(3)
+			
+			console.log(arr.pop())
+			console.log(arr.pop())
+			console.log(arr.pop())
+			
+			// 反转数组
+			var array = [1,2,3,4,5,6]
+			// 反转
+			array.reverse();
+			// 遍历
+			for(var i in array) {
+				console.log("%%%%%%%>"+ array[i])
+			}
+			
+			// 链接(将数组每个元素以“$”连接成一个字符串)
+			var str = array.join("$")
+			console.log(str)
+			
+			
+		</script>
+	</body>
+</html>

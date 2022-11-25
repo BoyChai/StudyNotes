@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>局部变量和全局变量</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/* 
+				全局变量:
+					在函数体之外声明的变量,叫做全局变量.
+					全局变量和浏览器打开的时候分配控件,直到浏览器关闭的时候才会销毁
+				局部变量:
+					在函数体当中声明的变量,叫做局部变量.
+					局部变量在函数被调用的时候分配空间,函数执行结束之后,内存释放.
+			 */
+			// 全局变量
+			var username = "zhangsan";
+			
+			// 定义函数
+			function sayHello(){
+				// 局部变量
+				var username = "list";
+				alert("welcome," + username);
+			}
+			
+			function sayHello2(){
+				alert("welcome," + username);
+				
+				var i = 100
+			}
+			
+			// say i
+			// alert(i)
+			
+			var k;
+			alert(k) 	//声明了一个变量,但是没有手动赋值,系统默认赋值undefined
+		
+			// alert(aa) 	// 如果没有声明就使用则会报错并且下面的代码不会继续执行
+			
+			// setMail = function(){
+			// 	var email = "1972567225@qq.com"
+			// }
+			// setMail()
+			// alert(email)
+			
+			setMail = function(){
+				email = "1972567225@qq.com"
+			}
+			setMail()
+			alert(email)
+			
+			
+		</script>
+		<input type="button" value="sayHello" onclick="sayHello()">
+		<br>
+		<input type="button" value="sayHello2" onclick="sayHello2()">
+		<br>
+		
+	</body>
+</html>

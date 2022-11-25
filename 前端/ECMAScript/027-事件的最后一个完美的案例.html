@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>事件的最后一个完美的案例</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.onload = function(){
+			
+				var btn1Elt = document.getElementById("btn1")
+				var btn2Elt = document.getElementById("btn2")
+				btn1Elt.onclick = function(){
+					console.log("按钮1被点击了！")
+				}
+				btn2Elt.onclick = function(){
+					console.log("按钮2被点击了！")
+				}
+				document.getElementById("username").onblur = function(){
+						console.log("失去焦点了")
+				}
+			
+			}
+			
+		</script>
+		
+		<input type="button" value="按钮一" id="btn1">
+		
+		<input type="button" value="按钮二" id="btn2">
+		
+		<input type="text" id="username">
+	</body>
+</html>
