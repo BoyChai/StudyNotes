@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>获取文本框的value</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.onload = function() {
+				var myinput = document.getElementById("myinput")
+				myinput.onchange = function() {
+					console.log(myinput.value)
+				}
+			}
+		</script>
+		<input type="text" id="myinput" />
+	</body>
+</html>
