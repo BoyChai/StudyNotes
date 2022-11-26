@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>显示网页时钟</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.onload = function() {
+				var displayTimeBtn =  document.getElementById("displayTimeBtn")
+				displayTimeBtn.onclick = function(){
+					// 创建周期对象v,并设置后期执行getData函数 周期执行是50毫秒
+					v = window.setInterval("getData()",50)
+				}
+				var displayTimeBtn =  document.getElementById("displayTimeBtn2")
+				displayTimeBtn.onclick = function(){
+					// 拿到周期对象并停止
+					window.clearInterval(v)
+				}
+				
+			}
+			var getData = function() {
+				var nowTime = new Date();
+				// document.getElementById("timediv").innerHTML = nowTime.toLocaleDateString()
+				document.getElementById("timediv").innerHTML = nowTime
+			}
+		</script>
+		<input type="button" value="显示系统当前时间" id="displayTimeBtn">
+		<input type="button" value="停止显示" id="displayTimeBtn2">
+		<br>
+		<div id="timediv"></div>
+	</body>
+</html>

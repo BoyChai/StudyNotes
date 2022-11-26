@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>alert和confirm方法</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var sayHello = function(){
+				// 弹出消息框
+				// alert()
+				window.alert("hello,world")
+			}
+			var del = function(){
+				// 删除数据之前一定要提示用户是否真的要删除,用户点击了确定才表示真的删除
+				// 确认框
+				var ok = window.confirm("亲,确认删除数据吗?")
+				console.log(ok)
+				if (ok) {
+					alert("数据删除成功")
+					console.log("删除数据成功")
+				}
+			}
+		</script>
+		
+		<input type="button" value="hello" onclick="sayHello()">
+		<br>
+		<input type="button" value="删除" onclick="del()" />
+	</body>
+</html>
