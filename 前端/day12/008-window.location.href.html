@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>window.location.href</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function goBaidu(){
+				window.location.href = "http://www.baidu.com";
+				// window.location = "http://www.baidu.com";
+				
+				// document.location.href = "http://www.baidu.com";
+				// document.location = "http://www.baidu.com";
+			}
+		</script>
+		<!-- 
+			跳转页面可以通过多种方式:
+				第一种方式：直接在浏览器地址栏写URL。
+				第二种方式：可以点击超链接。
+				第三种方式：提交表单。
+				第四种方式：window.open(url,target)
+				第五种方式：js代码：window.location.href
+				
+		 -->
+		 <input type="button" value="百度" onclick="goBaidu();">
+	</body>
+</html>
