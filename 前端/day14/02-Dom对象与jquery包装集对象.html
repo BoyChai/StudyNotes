@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Dom对象与jquery包装对象</title>
+	</head>
+	<body>
+		<div id="mydiv">文本</div>
+	</body>
+	<!-- 
+		Dom对象
+			通过js方式获取的元素对象(document)
+		jQuery对象
+			通过jquery方法获取的元素对象，返回的是包装集
+	 -->
+	 <!-- 引入Jquery -->
+	 <script src="../jquery-3.6.1.js" type="text/javascript"></script>
+	 <script type="text/javascript">
+		 /* Bom对象 */
+		 var divDom = document.getElementById("mydiv");
+		 console.log(divDom)
+		 // 获取全部的div标签dom对象
+		 var divsDom = document.getElementsByTagName("div")
+		 console.log(divsDom)
+		 
+		 /* jQuery对象 */
+		 // 通过id选择获取元素对象  $("#id属性")
+		 var divJquery = $("#mydiv")
+		 console.log(divJquery)
+		 
+		 /* DOM对象转换Jquery */
+		 var divDomToJquery = $(divDom)
+		 console.log(divDomToJquery)
+	 </script>
+</html>
