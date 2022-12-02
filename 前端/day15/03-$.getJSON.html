@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>$.getJSON</title>
+	</head>
+	<!-- 
+		$.getJSON
+			语法：
+				$.getJSON("请求地址","请求参数",function(形参){
+					
+				});
+			注：getJSON方式要求返回的数据格式满足json格式（json字符串）
+	 -->
+	<body>
+	</body>
+	<script src="../jquery-3.6.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$.getJSON("./data.json",{},function(d){
+			console.log(d);
+		});
+		$.get("./test.txt",{},function(d){
+			console.log(d);
+		});
+		// 如果返回的数据不是json格式的，则无法获取
+		/* $.getJSON("js/test.txt",{},function(d){
+			console.log(d);
+		}); */
+		
+	</script>
+</html>

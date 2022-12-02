@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>操作元素的属性</title>
+	</head>
+	<body>
+		<!-- 
+			操作元素的属性
+				属性的分类：
+					固有属性：元素本身就有的属性（id、name、class、style）
+					返回值是boolean的属性：checked、selected、disabled
+					自定义属性：用户自己定义的属性
+			
+				attr()和prop()的区别：
+					1. 如果是固有属性，attr()和prop()方法均可操作
+					2. 如果是自定义属性，attr()可操作，prop()不可操作
+					3. 如果是返回值是boolean类型的属性
+						若设置了属性，attr()返回具体的值，prop()返回true；
+						若未设置属性，attr()返回undefined，prop()返回false；
+			
+				1. 获取属性
+					attr("属性名")
+					prop("属性名")
+				2. 设置属性
+					attr("属性名","属性值")
+					prop("属性名","属性值")
+				3. 移除属性
+					removeAttr("属性名");
+					
+				总结：
+					如果属性的类型是boolean（checked、selected、disabled），则使用prop()方法；否则使用attr()方法。
+		 
+		 -->
+		 <input type="checkbox" name="ch" checked="checked" id="aa" abc="aabbcc"/>	aa
+		 <input type="checkbox" name="ch" id="bb" />	bb
+	</body>
+	<script src="../jquery-3.6.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		/* 获取属性 */
+		// 固有属性
+		var name = $("#aa").attr("name");
+		console.log(name);
+		var name2 = $("#aa").prop("name");
+		console.log(name2);
+		// 返回值是boolean的属性（元素设置了属性）
+		var ck1 = $("#aa").attr("checked"); // checked
+		var ck2 = $("#aa").prop("checked"); // true
+		console.log(ck1);
+		console.log(ck2);
+		// 返回值是boolean的属性（元素未设置属性）
+		var ck3 = $("#bb").attr("checked"); // undefined
+		var ck4 = $("#bb").prop("checked"); // false
+		console.log(ck3);
+		console.log(ck4);
+		// 自定义属性
+		var abc1 = $("#aa").attr("abc"); // aabbcc
+		var abc2 = $("#aa").prop("abc"); // undefined
+		console.log(abc1);
+		console.log(abc2);
+		
+		/* 设置属性 */
+		// 固有属性
+		$("#aa").attr("value","1");
+		$("#bb").prop("value","2");
+		
+		// 返回值是boolean的属性
+		$("#bb").attr("checked","checked");
+		$("#bb").prop("checked",false);
+		
+		// 自定义属性
+		$("#aa").attr("uname","admin");
+		$("#aa").prop("uage",18);
+		
+		/* 移除属性 */
+		$("#aa").removeAttr("checked")
+		
+		
+	</script>
+</html>

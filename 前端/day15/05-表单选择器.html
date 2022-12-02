@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单选择器</title>
+	</head>
+	<body>
+		<form id='myform' name="myform"  method="post">		
+			<input type="hidden" name="uno" value="9999" disabled="disabled"/>
+			姓名:<input type="text" id="uname" name="uname" /><br />
+			密码:<input type="password" id="upwd" name="upwd" value="123456" /><br />
+			年龄:<input type="radio" name="uage" value="0" checked="checked"/>小屁孩
+				 <input type="radio" name="uage" value="1"/>你懂得  <br /> 
+			爱好:<input type="checkbox" name="ufav" value="篮球"/>篮球
+				 <input type="checkbox" name="ufav" value="爬床"/>爬床
+				 <input type="checkbox" name="ufav" value="代码"/>代码<br />
+			来自:<select id="ufrom" name="ufrom">
+					<option value="-1" selected="selected">请选择</option>
+					<option value="0">北京</option>
+					<option value="1">上海</option>
+				</select><br />
+			简介:<textarea rows="10" cols="30" name="uintro"></textarea><br />
+			头像:<input type="file"  /><br />
+			<input type="image" src="http://www.baidu.com/img/bd_logo1.png" 
+				   width="20" height="20"/>
+			<button type="submit" onclick="return checkForm();">提交</button>
+			<button type="reset" >重置</button>		
+			
+		</form>
+	</body>
+	<!--
+		表单选择器
+			表单选择器		:input 			查找所有的input元素：$(":input")；
+											注意：会匹配所有的input、textarea、select和button元素。
+			文本框选择器		:text
+			密码框选择器		:password
+			单选按钮选择器	:radio
+			多选按钮选择器	:checkbox
+			提交按钮选择器	:sunmit
+			图像按钮选择器	:image
+			重置按钮选择器	:reset
+			文件域选择器		:file
+			按钮选择器		:button
+	 -->
+	<script src="js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		// 表单选择器		:input
+		var inputs = $(":input");
+		console.log(inputs);
+		// 元素选择器
+		var inputs2 = $("input");
+		console.log(inputs2);
+		
+		
+	</script>
+</html>

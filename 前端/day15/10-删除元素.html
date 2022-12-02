@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>删除元素</title>
+		<style type="text/css">
+			span{
+				color: white;
+				padding: 8px;
+				margin: 5px;
+				float: left;
+			}
+			.green{
+				background-color: green;
+			}
+			.blue{
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>删除元素</h3>
+		<span class="green">jquery<a>删除</a></span>
+		<span class="blue">javase</span>
+		<span class="green">http协议</span>
+		<span class="blue">servlet</span>
+	</body>
+	<!-- 
+		删除元素
+			remove()
+				删除元素及其对应的子元素，标签和内容一起删除
+				指定元素.remove();
+			empty()
+				清空元素内容，保留标签 
+				指定元素.empty();
+	 -->
+	 <script src="../jquery-3.6.1.js" type="text/javascript" charset="utf-8"></script>
+	 <script type="text/javascript">
+	 	// 删除元素
+		$(".green").remove();
+		// 清空元素
+		$(".blue").empty();
+		
+	 </script>
+	 
+</html>

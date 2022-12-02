@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>层次选择器</title>
+		<style type="text/css">
+			.testColor{
+				background: green;
+			}
+			.gray{
+				background: gray;
+			}
+		</style>
+	</head>
+	<!-- 
+		层次选择器
+			后代选择器
+				格式： 父元素 指定元素 （空格隔开）
+				示例： $("父元素 指定元素")
+				选择父元素的所有指定元素（包含第一代、第二代等）
+			子代选择器
+				格式： 父元素 > 指定元素 （大于号隔开）
+				示例： $("父元素 > 指定元素")
+				选择父元素的所有第一代指定元素
+			相邻选择器
+				格式： 元素 + 指定元素 （加号隔开）
+				示例： $("元素 + 指定元素")
+				选择元素的下一个指定元素（只会查找下一个元素，如果元素不存在，则获取不到）
+			同辈选择器
+				格式： 元素 ~ 指定元素 （波浪号隔开）
+				示例： $("元素 ~ 指定元素")
+				选择元素的下面的所有指定元素
+	 -->
+	<body>
+		<div id="parent">层次择器
+			<div id="child" class="testColor">父选择器
+				<div class="gray">子选择器</div>
+				<img src="http://www.baidu.com/img/bd_logo1.png" 
+					  width="270" height="129" />
+				<img src="http://www.baidu.com/img/bd_logo1.png" 
+					  width="270" height="129" />
+			</div>	
+			<p>p元素</p>
+			<div>
+				选择器2<div>选择器2中的div</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		// 后代选择器
+		var hd = $("#parent div");
+		console.log(hd);
+		
+		// 子代选择器
+		var zd = $("#parent > div");
+		console.log(zd);
+		
+		// 相邻选择器
+		var xl = $("#child + div");
+		console.log(xl);
+		
+		// 同辈选择器
+		var imgs = $(".gray ~ img");
+		console.log(imgs);
+		
+	</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>$ajax</title>
+	</head>
+	<body>
+		<script src="../jquery-3.6.1.js" type="text/javascript"></script>
+		<!-- 
+			jquery调用ajax方法：
+			
+			​		格式：$.ajax({});
+			​			参数：
+			​				type：请求方式GET/POST
+			​				url：请求地址url
+			​				async：是否异步，默认是true表示异步
+			​				data：发送到服务器的数据
+			​				dataType：预期服务器返回的数据类型
+			​				contentType：设置请求头
+			​				success：请求成功时调用此函数
+			​				error：请求失败时调用此函数
+		 -->
+		 <script type="text/javascript">
+			 $.ajax({
+				type:"get",	//请求方式
+				url:"./data.txt",	//请求地址
+				data:{	//请求数据
+					uname:"zhangsan",	//如果没有参数，则不需要设置
+				},
+				success:function(data){
+					console.log(data)
+					// window.eval("var jsData = " + data)
+					var jsData = JSON.parse(data)
+					console.log(jsData)
+					$("body").html(data)
+				}
+			 });
+		 </script>
+	</body>
+</html>
