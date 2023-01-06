@@ -1,0 +1,52 @@
+/* 
+	编写常用样式，设置字体统一大小、颜色、字形等，目前是让所有浏览器看到的标签效果是一样的。
+	项目中任何一个文件都要引入该样式 
+*/
+
+* {
+	/* 清除内外边距 */
+	margin: 0;
+	padding: 0;
+}
+
+em,i {
+	/* 斜体不倾斜 */
+	font-style: normal;
+}
+
+li {
+	/* 去掉列表的小点 “·” */
+	list-style: none;
+}
+
+img {
+	/* 设置图片没有边框 去掉图片底测的空白缝隙 */
+	border: 0;
+	vertical-align: middle;
+}
+
+button {
+	/* 当鼠标移动到button上面需要变成小手的状态 */
+	cursor: pointer;
+}
+
+button, input {
+	/* 修改button按钮和input标签字体，去掉轮廓线 */
+    font-family: 'Microsoft YaHei', 'Heiti SC', tahoma, arial, 'Hiragino Sans GB';
+    /*取消轮廓线 蓝色的*/
+    outline: none;
+}
+
+a {
+	/* 设置超链接的字体颜色和下划线 */
+	color: #666;
+	text-decoration: none;
+	
+}
+
+body{
+	/* 重置页面背景色、字体大小、字形、颜色 */
+	background-color: #f5f5f5;
+	font: 12px/1.5'Microsoft YaHei';
+	color: #666;
+}

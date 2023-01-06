@@ -1,0 +1,36 @@
+/* 
+	编写一些非常常用的样式，例如：清除浮动、版心等。
+	项目中的绝大多数页面都会引入该样式。
+ */
+
+.hide,.none {
+	/* 隐藏标签样式 */
+    display: none;
+}
+
+.clearfix:after {
+	/*清除浮动*/
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+.clearfix {
+    *zoom: 1
+}
+
+.fl {
+	/* 定义左右浮动 */
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.w {
+	/* 定义版心 */
+    width: 1200px;
+    margin:  0 auto;
+}
