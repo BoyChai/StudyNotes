@@ -1,0 +1,41 @@
+/* 背景色 */
+.header-box {
+	background-color: #f1f1f1;
+	height: 30px;
+}
+/* 版心 */
+.header {
+	height: 30px;
+	/* 字体居中 */
+	line-height: 31px;
+}
+
+/* 左浮动 */
+.header .fl {
+	height: 30px;
+	width: 200px;
+}
+/* 左浮动的a标签默认样式 */
+.header .fl a {
+	color: red;
+}
+/* 鼠标移动到左浮动的a标签样式 */
+.header .fl a:hover {
+	/* 下划线 */
+	text-decoration: underline;
+}
+
+/* 右浮动 */
+.header .fr{
+	height: 30px;
+	width: 320px;
+}
+/* 右浮动边长 */
+/* .header .fr a {
+	margin: 0 10px;
+} */
+.header .fr a:hover {
+	color: red;
+	/* 下划线 */
+	text-decoration: underline;
+}

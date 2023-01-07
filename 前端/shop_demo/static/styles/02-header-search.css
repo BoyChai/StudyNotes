@@ -1,0 +1,87 @@
+.header-search {
+	height: 106px;
+	background-color: #fff;
+}
+
+/* 相对定位 */
+.header-search-box {
+	position: relative;
+}
+
+/* logo样式 */
+.header-search h1 {
+	/* 绝对定位 */
+	position: absolute;
+	left: 0;
+	top: 20px;
+	width: 175px;
+	height: 56px;
+	/* background-color: green; */
+	background-image: url(/shop_demo/static/images/logo3.png);
+}
+
+.header-search h1 a {
+	/* a标签是行内元素，无法设置宽高，需要转换成块 */
+	display: block;
+	width: 100%;
+	height: 100%;
+	/* 为什么要写字体？还设置成0px
+			当收录蜘蛛爬取页面做收录的时候需要用到。
+			如果显示出来又太难看了所以设置成0px。
+	 */
+	font-size: 0px;
+}
+
+/* 搜索框 */
+.search-box {
+	/* 绝对定位 */
+	position: absolute;
+	left: 280px;
+	top: 23px;
+	width: 520px;
+	height: 35px;
+/* 	background-color: red;	*/
+	border: 2px solid #E1251B;
+}
+/* 搜索框input */
+.search-box input {
+	/* margin-left: 10px; */
+	padding-left: 10px;
+	width: 380px;
+	height: 35px;
+	border: 0px solid;
+}
+/* 搜索框button */
+.search-box button {
+	width: 70px;
+	height: 35px;
+	background-color: #E1251B;
+	border: 0px solid;
+}
+.search-box button .iconfont {
+	color: #fff;
+	font-weight: 700;
+}
+
+/* 热门关键词 */
+.hotwords {
+	/* 绝对定位 */
+	position: absolute;
+	left: 280px;
+	top: 65px;
+	background-color: green;
+	height: 20px;
+	width: 520px;
+}
+
+/* 购物车 */
+.cart {
+	/* 绝对定位 */
+	position: absolute;
+	right: 50px;
+	top: 23px;
+	
+	width: 138px;
+	height: 34px;
+	background-color: red;
+}
