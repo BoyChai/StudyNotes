@@ -1,11 +1,12 @@
 .header-search {
-	height: 106px;
+	height: 156px;
 	background-color: #fff;
 }
 
 /* 相对定位 */
 .header-search-box {
 	position: relative;
+	height: 106px;
 }
 
 /* logo样式 */
@@ -69,9 +70,16 @@
 	position: absolute;
 	left: 280px;
 	top: 65px;
-	background-color: green;
+	/* background-color: green; */
 	height: 20px;
 	width: 520px;
+}
+/* 热门关键词的a标签样式 */
+.hotwords a.current {
+	color: #E1251B;
+}
+.hotwords a:hover{
+	color: #E1251B;
 }
 
 /* 购物车 */
@@ -83,5 +91,75 @@
 	
 	width: 138px;
 	height: 34px;
+	background-color: #f7f7f7;
+	border: 1px solid #dfdfdf;
+	
+	/* 水平剧中 */
+	text-align: center;
+	line-height: 34px;
+	
+	color: red;
+	
+}
+.cart:hover {
+	/* 鼠标样式为小手 */
+	cursor: pointer;
+	/* 边框颜色 */
+	border: 1px solid red;
+}
+/* 加粗购物车图标 */
+.cart .iconfont {
+	margin-right: 5px;
+	font-weight: 700;
+}
+/* 购物车数量 */
+.cart .num{
+	/* 绝对定位 */
+	position: absolute;
+	left: 46px;
+	top: -13px;
+
+	
+	display: block;
+	width: 20px;
+	height: 20px;
 	background-color: red;
+	color: #fff;
+	/* 水平方向剧中 */
+	text-align: center;
+	line-height: 20px;
+	/* 圆形样式 */
+	border-radius: 50% 50% 50% 0%;
+}
+
+.channel {
+	height: 46px;
+}
+
+/* 频道区 */
+.cate-list {
+	width: 210px;
+	height: 46px;
+	background-color: #b1191a;
+	
+	text-align: center;
+	line-height: 46px;
+	font-size: 16px;
+	color: #fff;
+}
+.channel-items {
+	height: 46px;
+}
+.channel-items a {
+	display: block;
+	float: left;
+	height: 46px;
+	width: 100px;
+	text-align: center;
+	line-height: 46px;
+	font-size: 16px;
+}
+.channel-items a:hover {
+	background-color: #b1191a;
+	color: #fff;
 }
