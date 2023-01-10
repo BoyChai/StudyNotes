@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 	<head>
 		<meta charset="utf-8">
 		<title>主页</title>
@@ -9,19 +9,20 @@
 		<link rel="stylesheet" href="./static/styles/01-shortcut.css">
 		<link rel="stylesheet" href="./static/styles/02-header-search.css">
 		<link rel="stylesheet" href="./static/font/iconfont.css">
+		<link rel="stylesheet" href="./static/styles/03-swiper.css">
 	</head>
 	<body>
 		<!-- 顶部快捷导航栏 开始 -->
 		<div class="header-box">
 			<div class="header w">
 				<div class="fl">
-					优购商城欢迎您 ! 
+					优购商城欢迎您 !
 					<a href="#">登录</a>
 					<a href="#">免费注册</a>
 				</div>
 				<div class="fr">
 					<a href="#">我的订单</a>
-	                <span>|</span>
+					<span>|</span>
 					<a href="#">我的优购</a>
 					<span>|</span>
 					<a href="#">会员</a>
@@ -35,9 +36,9 @@
 			</div>
 		</div>
 		<!-- 顶部快捷导航栏 结束 -->
-		
+
 		<!-- logo和搜索区域 开始 -->
-		
+
 		<div class="header-search">
 			<div class="header-search-box w">
 				<!-- log区域 -->
@@ -69,7 +70,44 @@
 			</div>
 			<!-- 频道导航区 -->
 			<div class="channel w">
-				<div class="cate-list fl">全部商品分类</div>
+				<div class="cate-list fl">
+					<div class="dl">全部商品分类</div>
+					<div class="dt">
+						<ul>
+							<li class="item">
+								<a href="http://www.baidu.com">家用电器 / 大家电</a>
+								<span class="iconfont icon-chevron-right-single" />
+							</li>
+							<li class="item"><a href="#">手机 / 数码 / 通信</a>
+								<span class="iconfont icon-chevron-right-single" /></li>
+							<li class="item"><a href="#">电脑 / 办公</a><span class="iconfont icon-chevron-right-single" />
+							</li>
+							<li class="item"><a href="#">家居 / 家具 / 家装 / 厨具</a><span
+									class="iconfont icon-chevron-right-single" /></li>
+							<li class="item"><a href="#">男装 / 女装 / 童装 / 内衣</a><span
+									class="iconfont icon-chevron-right-single" /></li>
+							<li class="item"><a href="#">个户化妆 / 清洁用品 / 宠物</a><span
+									class="iconfont icon-chevron-right-single" /></li>
+							<li class="item"><a href="#">鞋靴 / 箱包 / 珠宝 / 奢侈品</a><span
+									class="iconfont icon-chevron-right-single" /></li>
+							<li class="item"><a href="#">运动户外 / 钟表</a><span class="iconfont icon-chevron-right-single" />
+							</li>
+							<li class="item"><a href="#">汽车 / 汽车用品</a><span class="iconfont icon-chevron-right-single" />
+							</li>
+							<li class="item"><a href="#">母婴 / 玩具乐器</a><span class="iconfont icon-chevron-right-single" />
+							</li>
+							<li class="item"><a href="#">食品 / 酒类 / 生鲜 / 特产</a><span
+									class="iconfont icon-chevron-right-single" /></li>
+							<li class="item"><a href="#">医药保健</a><span class="iconfont icon-chevron-right-single" /></li>
+							<li class="item"><a href="#">图书 /音像 / 电子书</a><span
+									class="iconfont icon-chevron-right-single" /></li>
+							<li class="item"><a href="#">彩票 / 旅行 / 充值/票务</a><span
+									class="iconfont icon-chevron-right-single" /></li>
+							<li class="item"><a href="#">理财 / 众筹 / 白条 / 保险</a><span
+									class="iconfont icon-chevron-right-single" /></li>
+						</ul>
+					</div>
+				</div>
 				<div class="channel-items fl">
 					<a href="#">潮服饰</a>
 					<a href="#">美妆管</a>
@@ -82,7 +120,32 @@
 			</div>
 			<div></div>
 		</div>
-		
+
 		<!-- logo和搜索区域 结束 -->
+		
+		<!-- 轮播图区域 开始 -->
+		<div class="swiper-box w">
+			<!-- 轮播图 -->
+			<div class="swiper">
+				<a href="#"></a>
+			</div>
+			<!-- 左右切换 -->
+			<div class="arrow arrow-l">
+				<span class="iconfont icon-chevron-right-single"></span>
+			</div>
+			<div class="arrow arrow-r">
+				<span class="iconfont icon-right"></span>
+			</div>
+			<!-- 切换圆点 -->
+			<ul class="circle">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			
+		</div>
+		<!-- 轮播图区域 结束 -->
+		<script src="./static/index.js"></script>
 	</body>
 </html>

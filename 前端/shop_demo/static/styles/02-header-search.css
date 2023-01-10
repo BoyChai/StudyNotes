@@ -1,5 +1,5 @@
 .header-search {
-	height: 156px;
+	height: 152px;
 	background-color: #fff;
 }
 
@@ -140,13 +140,34 @@
 .cate-list {
 	width: 210px;
 	height: 46px;
-	background-color: #b1191a;
 	
+}
+.cate-list .dl {
+	background-color: #b1191a;
 	text-align: center;
 	line-height: 46px;
 	font-size: 16px;
 	color: #fff;
 }
+.cate-list .dt {
+	width: 210px;
+	height: 465px;
+	background-color: #E1251B;
+}
+
+.cate-list .dt li {
+	height: 31px;
+	line-height: 31px;
+	padding: 0 5px;
+}
+.cate-list .dt li a {
+	color: #fff;
+}
+
+.cate-list .dt li .iconfont {
+	float: right;
+}
+
 .channel-items {
 	height: 46px;
 }
@@ -159,7 +180,8 @@
 	line-height: 46px;
 	font-size: 16px;
 }
+
 .channel-items a:hover {
-	background-color: #b1191a;
 	color: #fff;
+	background-color: #b1191a;
 }

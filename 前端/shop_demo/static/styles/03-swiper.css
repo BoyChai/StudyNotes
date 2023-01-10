@@ -1,0 +1,56 @@
+.swiper-box {
+	position: relative;
+}
+
+.swiper {
+	width: 990px;
+	height: 460px;
+	/* border: 1px solid red; */
+	margin-left: 210px;
+}
+
+.swiper a {
+	display: block;
+	width: 990px;
+	height: 465px;
+	background-image: url(/shop_demo/static/uploads/slider-1.png);
+	background-size: cover;
+}
+.swiper-box .arrow{
+	position: absolute;
+	width: 30px;
+	height: 60px;
+	background-color: rgba(0, 0, 0, .15);
+	text-align: center;
+	line-height: 60px;
+}
+.swiper-box .arrow:hover {
+	background-color: rgba(0, 0, 0, 30);
+}
+.swiper-box .arrow-l{
+	top: 190px;
+	right: 0px;
+}
+.swiper-box .arrow-r{
+	top: 190px;
+	left: 210px;
+}
+
+/* 切换圆点 */
+.circle {
+	position: absolute;
+	top: 435px;
+	right: 20px;
+}
+.circle li{
+	float: left;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #505051;
+	border-radius: 50%;
+	margin-left: 10px;
+}
+/* 小圆点样式 */
+.circle li.active {
+	border: 2px solid #cccccc;
+}
