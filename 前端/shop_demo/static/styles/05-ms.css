@@ -1,0 +1,115 @@
+
+
+.miaosha {
+    height: 300px;
+    margin-top: 20px;
+}
+/* 标题和按钮 */
+.miaosha h3 {
+    display: inline-block;
+}
+.miaosha .ms-arrow {
+    float: right;
+}
+.miaosha .ms-arrow span {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 18px;
+}
+
+/* 秒杀主体区 */
+.miaosha .miaosha-main {
+    height: 260px;
+    margin-top: 10px;
+}
+/* 左侧倒计时 */
+.countdown {
+    float: left;
+    width: 190px;
+    height: 260px;
+    background: url(../images/ms.jpg) no-repeat;
+    color: #fff;
+}
+.countdown h3 {
+    width: 190px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30px;
+}
+.countdown p {
+    margin-top: 110px;
+    width: 190px;
+    font-size: 16px;
+    text-align: center;
+}
+.countdown p span {
+    font-size: 18px;
+    font-weight: 700;
+}
+.countdown .timer {
+    margin-top: 10px;
+    width: 190px;
+    text-align: center;
+    font-size: 16px;
+}
+.timer div {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    text-align: center;
+    line-height: 30px;
+}
+
+/* 秒杀商品列表 */
+.miaosha-goods {
+    position: relative;
+    margin-left: 190px;
+    width: 1010px;
+    height: 260px;
+    overflow: hidden;
+}
+
+.miaosha-goods ul {
+    position: absolute;
+    width: 3030px;
+    height: 260px;
+}
+
+.miaosha-goods li {
+    float: left;
+    width: 198px;
+    height: 260px;
+    margin-left: 4px;
+    background-color: #fff;
+    text-align: center;
+}
+.miaosha-goods li img {
+    margin-top: 20px;
+}
+.miaosha-goods h4 {
+    margin-top: 8px;
+    padding: 0 20px;
+}
+
+.miaosha-goods p {
+    margin-top: 8px;
+}
+.miaosha-goods p span {
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+}
+
+.miaosha-goods p span:first-child {
+    margin: 0;
+    color: #E82E21;
+}
+.miaosha-goods p span:last-child {
+    color: #a0a0a0;
+    text-decoration: line-through;
+}

@@ -15,6 +15,9 @@
 	height: 465px;
 	background-image: url(/shop_demo/static/uploads/slider-1.png);
 	background-size: cover;
+
+	/* 切换样式	*/
+	transition: all 1s;
 }
 .swiper-box .arrow{
 	position: absolute;

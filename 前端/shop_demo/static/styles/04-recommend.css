@@ -1,0 +1,39 @@
+.recommend {
+    height: 170px;
+    margin-top: 10px;
+}
+/* 左侧时钟 */
+.recommend .recommend-icon {
+    /*float: left;*/
+    width: 236px;
+    height: 170px;
+    background-color: #5F5750;
+    text-align: center;
+}
+.recommend-icon .icon-shizhong {
+    margin-top: 20px;
+    font-size: 80px;
+    color: #fff;
+}
+
+.recommend-icon h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* 右侧推荐商品 */
+.recommend .recommend-goods {
+    margin-left: 236px;
+    width: 964px;
+    height: 170px;
+}
+
+.recommend-goods li {
+    float: left;
+    margin-left: 5px;
+}
+
+.recommend-goods img {
+    width: 316px;
+}
