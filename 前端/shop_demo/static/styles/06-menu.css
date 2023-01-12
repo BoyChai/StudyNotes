@@ -1,0 +1,36 @@
+.menu {
+    /* 默认隐藏 */
+    display: none;
+    /* 固定定位 */
+    position: fixed;
+    left: 0px;
+    top: 200px;
+
+    padding: 0 10px;
+    /* 边框 */
+    border: 1px solid #ccc;
+    /* 圆角 */
+    border-radius: 8px;
+    /* 阴影 */
+    box-shadow: 0 3px 14px 2px rgb(0 0 0 / 30%);
+
+    /*width: 60px;*/
+    /*height: 100px;*/
+}
+.menu li {
+    /* 鼠标移动到上面的样式 */
+    cursor: pointer;
+
+    width: 60px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    /* 下划线 */
+    border-bottom: 2px solid #ccc;
+}
+.menu li:last-child {
+    border-bottom: 0px;
+}
+.menu li.active {
+    color: #E1251B;
+}

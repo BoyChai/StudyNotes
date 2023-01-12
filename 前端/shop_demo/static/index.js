@@ -204,3 +204,98 @@
 		autoRoll()
 	}
 }
+
+// 4.左侧电梯导航
+{
+	// 获取电梯导航栏的ul对象
+	var menu = document.querySelector(".menu")
+
+	// 获取优购秒杀对象
+	var ms = document.querySelector(".miaosha")
+	// 输出ms这个对象距离顶端的像素
+	// console.log(ms.offsetTop)
+
+	// 获取各个楼层对象
+	var cates = document.querySelectorAll(".cate")
+	// 存储所有楼层坐标的变量
+	var tops = []
+	for (let i = 0; i < cates.length; i++) {
+		tops.push(cates[i].offsetTop)
+	}
+	console.log(tops)
+
+	// 获取所有楼层按钮,并注册点击事件
+	var btns = document.querySelectorAll('.menu li')
+	console.log(btns)
+	for (let i = 0; i < btns.length; i++) {
+		btns[i].onclick = function () {
+			btns[i].index = i
+			// 滚动样式
+			var startPos = window.scrollY
+			var targetPos = tops[this.index]
+
+			// 下面的滚动动画可以使用函数分离开
+			if (startPos > targetPos) {
+				// 向上导航样式
+				let timer = setInterval(function () {
+					//每隔50ms startPos增加若干像素,直到startPos>=targetPos,则停止
+					startPos -= 12
+					if (startPos > targetPos) {
+						window.scrollTo(0, startPos)
+					} else{
+						clearInterval(timer)
+					}
+				},4)
+			} else {
+				// 向下导航样式
+				let timer = setInterval(function () {
+					//每隔50ms startPos增加若干像素,直到startPos>=targetPos,则停止
+					startPos += 12
+					if (startPos < targetPos) {
+						window.scrollTo(0, startPos)
+					} else{
+						clearInterval(timer)
+					}
+				},4)
+			}
+
+			// window.scrollTo(0,tops[this.index])
+			// 清空激活样式
+			btns.forEach(function (item) {
+				item.className = ""
+			})
+			// 设置激活样式
+			btns[i].className = "active"
+		}
+	}
+	function activeFloor(index) {
+		btns.forEach(function (item) {
+			item.className = ""
+		})
+		// for (let i = 0; i < btns.length; i++) {
+		// 	btns[i].className=""
+		// }
+		btns[index].className = "active"
+	}
+	// 在Window对象上注册onscroll事件,该事件会在浏览器上下滚动或者左右滚动时候触发
+	window.onscroll = function () {
+		// scrollY是网页顶部的坐标
+		// console.log(window.scrollY)
+		// console.log(ms.offsetTop)
+		if(window.scrollY > ms.offsetTop) {
+			menu.style.display='block'
+		} else {
+			menu.style.display="none"
+		}
+		// 这里存在问题为解决,滚动的时候切换的有点毛病,原因未找到
+		if (window.scrollY >= tops[0] && window.scrollY < tops[1]) {
+			activeFloor(0)
+		} else if (window.scrollY >= tops[1] && window.scrollY > tops[2]) {
+			activeFloor(1)
+		}else if (window.scrollY >= tops[2] && window.scrollY > tops[3]) {
+			activeFloor(2)
+		}else if (window.scrollY >= tops[3]) {
+			activeFloor(3)
+		}
+	}
+}
