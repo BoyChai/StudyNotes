@@ -35,3 +35,15 @@
     width: 1200px;
     margin:  0 auto;
 }
+
+/* 下方版权 */
+.footer-copyright {
+    text-align: center;
+}
+.copyright_links {
+    margin-top: 15px;
+}
+.copyright_info {
+    margin-top: 10px;
+}
+/* footer 页面底部 -- end */
