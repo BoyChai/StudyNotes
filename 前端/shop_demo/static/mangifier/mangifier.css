@@ -1,0 +1,21 @@
+.mask{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.15);
+}
+
+.megaloscope {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #cccccc;
+    background-color: #fff;
+    /* 超出范围不显示 */
+    overflow: hidden;
+}
+.megaloscope img {
+    position: absolute;
+}

@@ -1,0 +1,91 @@
+.gooods-info {
+    background-color: #fff;
+}
+.gooods-info .breadcrumb {
+    padding: 10px 0;
+}
+/* 左侧图片区 开始 */
+.big-pic {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #ccc;
+}
+.big-pic>img {
+    width: 400px;
+    height: 400px;
+}
+
+/*.big-pic .mask {*/
+/*    display: none;*/
+/*    cursor: move;*/
+/*    position: absolute;*/
+/*    top: 30px;*/
+/*    left: 50px;*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*    background-color: rgba(0, 0, 0, .15);*/
+/*}*/
+
+/*.big-pic .megaloscope {*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    left: 450px;*/
+/*    top: 0;*/
+/*    width: 500px;*/
+/*    height: 500px;*/
+/*    background-color: #fff;*/
+/*    border: 1px solid #ccc;*/
+/*    z-index: 10;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.big-pic .megaloscope>img {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*}*/
+
+.small-list {
+    width: 400px;
+    height: 64px;
+    margin-top: 40px;
+}
+
+.small-list .arrow {
+    width: 40px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+}
+.small-list .arrow .iconfont {
+    box-sizing: border-box;
+    padding: 5px;
+    border: 2px solid #666;
+    border-radius: 50%;
+}
+
+.small-list .list {
+    position: relative;
+    width: 320px;
+    height: 64px;
+    /* 超过区域隐藏 */
+    overflow: hidden;
+}
+
+.small-list .list>div {
+    position: absolute;
+    left: 0;
+    width: 576px;
+}
+
+.small-list .list img {
+    display: block;
+    float: left;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #fff;
+}
+
+/* 左侧图片区 结束 */
