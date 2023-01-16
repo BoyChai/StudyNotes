@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的购物车</title>
+    <link rel="stylesheet" href="./static/styles/reset.css">
+    <link rel="stylesheet" href="./static/styles/common.css">
+    <link rel="stylesheet" href="./static/styles/cart.css">
+</head>
+
+<body>
+    <!-- 顶部快捷导航栏 -- start -->
+    <div class="shortcut">
+        <!-- 版心div -->
+        <div class="w">
+            <!-- 左侧登陆注册 -->
+            <div class="fl">
+                优购商城欢迎您！
+                <a href="#">登录</a> 
+                <a href="#">免费注册</a>
+            </div>
+
+            <!-- 右侧分类链接 -->
+            <div class="fr">
+                <a href="#">我的订单</a>
+                <span>|</span>
+                <a href="#">我的优购</a>
+                <span>|</span>
+                <a href="#">会员</a>
+                <span>|</span>
+                <a href="#">企业采购</a>
+                <span>|</span>
+                <a href="#">客户服务</a>
+                <span>|</span>
+                <a href="#">网站导航</a>
+            </div>
+        </div>
+    </div>
+    <!-- 顶部快捷导航栏 -- end -->
+
+
+    <div class="car-header">
+        <div class="w">
+            <div class="car-logo">
+                <img src="./static/images/logo3.png" alt=""> <b>购物车</b>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="c-container">
+        <div class="w">
+            <div class="cart-filter-bar">
+                <em>全部商品</em>
+            </div>
+            <!-- 购物车主要核心区域 -->
+            <div class="cart-warp">
+                <!-- 头部全选模块 -->
+                <div class="cart-thead">
+                    <div class="t-checkbox">
+                        <input type="checkbox" name="" id="" class="checkall"> 全选
+                    </div>
+                    <div class="t-goods">商品</div>
+                    <div class="t-price">单价</div>
+                    <div class="t-num">数量</div>
+                    <div class="t-sum">小计</div>
+                    <div class="t-action">操作</div>
+                </div>
+                <!-- 商品详细模块 -->
+                <div class="cart-item-list">
+                    <div class="cart-item check-cart-item">
+                        <div class="p-checkbox">
+                            <input type="checkbox" name="" id="" checked class="j-checkbox">
+                        </div>
+                        <div class="p-goods">
+                            <div class="p-img">
+                                <img src="./static/uploads/cart/1.jpg" alt="">
+                            </div>
+                            <div class="p-msg">真机械手感键盘鼠标套装有线游戏背光发光台式电脑外设笔记本办公吃鸡网吧电竞薄膜键盘</div>
+                        </div>
+                        <div class="p-price">￥312.60</div>
+                        <div class="p-num">
+                            <div class="quantity-form">
+                                <a href="javascript:;" class="decrement">-</a>
+                                <input type="text" class="itxt" value="1">
+                                <a href="javascript:;" class="increment">+</a>
+                            </div>
+                        </div>
+                        <div class="p-sum">￥312.60</div>
+                        <div class="p-action"><a href="javascript:;">删除</a></div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="p-checkbox">
+                            <input type="checkbox" name="" id="" class="j-checkbox">
+                        </div>
+                        <div class="p-goods">
+                            <div class="p-img">
+                                <img src="./static/uploads/cart/2.jpg" alt="">
+                            </div>
+                            <div class="p-msg">缅甸翡翠玉手镯冰糯种飘花阳绿白底平安镯</div>
+                        </div>
+                        <div class="p-price">￥999.99</div>
+                        <div class="p-num">
+                            <div class="quantity-form">
+                                <a href="javascript:;" class="decrement">-</a>
+                                <input type="text" class="itxt" value="1">
+                                <a href="javascript:;" class="increment">+</a>
+                            </div>
+                        </div>
+                        <div class="p-sum">￥999.99</div>
+                        <div class="p-action"><a href="javascript:;">删除</a></div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="p-checkbox">
+                            <input type="checkbox" name="" id="" class="j-checkbox">
+                        </div>
+                        <div class="p-goods">
+                            <div class="p-img">
+                                <img src="./static/uploads/cart/3.jpg" alt="">
+                            </div>
+                            <div class="p-msg">男士中筒袜秋冬季透气吸汗长袜复古条纹运动袜学生篮球袜ins潮 十色条纹男中筒-10双装</div>
+                        </div>
+                        <div class="p-price">￥19.80</div>
+                        <div class="p-num">
+                            <div class="quantity-form">
+                                <a href="javascript:;" class="decrement">-</a>
+                                <input type="text" class="itxt" value="1">
+                                <a href="javascript:;" class="increment">+</a>
+                            </div>
+                        </div>
+                        <div class="p-sum">￥19.80</div>
+                        <div class="p-action"><a href="javascript:;">删除</a></div>
+                    </div>
+                </div>
+
+                <!-- 结算模块 -->
+                <div class="cart-floatbar">
+                    <div class="select-all">
+                        <input type="checkbox" name="" id="" class="checkall">全选
+                    </div>
+                    <div class="operation">
+                        <a href="javascript:;" class="remove-batch"> 删除选中的商品</a>
+                        <a href="javascript:;" class="clear-all">清理购物车</a>
+                    </div>
+                    <div class="toolbar-right">
+                        <div class="amount-sum">已经选<em>1</em>件商品</div>
+                        <div class="price-sum">总价： <em>￥12.60</em></div>
+                        <div class="btn-area">去结算</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-copyright w">
+        <p class="copyright_links">
+            关于我们  |  联系我们  |  联系客服  |  商家入驻  |  营销中心  |  友情链接  |  销售联盟  |  English Site  |  Contact U
+        </p>
+        <p class="copyright_info">
+            地址：西安市雁塔区旺座SOHO 邮编：721000 电话：400-666-8888 传真：029-86868686 邮箱: zsf@163.com  <br>
+            陕ICP备06980110号陕公网安备61030216812
+        </p>
+    </div>
+
+    <script src="./static/scripts/jquery.min.js"></script>
+    <script src="./static/scripts/cart.js"></script>
+</body>
+
+</html>

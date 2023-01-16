@@ -107,3 +107,52 @@
         // }
     })
 }
+
+// 3.选择规格
+{
+    // 获取对象
+    let colorAttr = document.querySelectorAll(".select-color a")
+    let versionAttr = document.querySelectorAll(".select-version a")
+    let typeAttr = document.querySelectorAll(".select-type a")
+
+
+    clickFunc(colorAttr)
+    clickFunc(versionAttr)
+    clickFunc(typeAttr)
+
+
+    // 选择函数
+    function clickFunc(attr) {
+        attr.forEach(function (item) {
+            item.onclick = function () {
+                attr.forEach(function (item) {
+                    item.style.border = '2px solid #f0f0f0'
+                })
+                this.style.border = '2px solid #C81623'
+            }
+        })
+    }
+
+}
+
+// 4.加减购买数量
+{
+    // 获取对象
+    let numInput = document.querySelector(".amount .num")
+    let addBtn = document.querySelector(".add")
+    let reduceBtn = document.querySelector(".reduce")
+
+
+    addBtn.onclick = function () {
+        numInput.value++
+        reduceBtn.style.cursor = 'pointer'
+    }
+    reduceBtn.onclick = function () {
+        if(numInput.value<=1) {
+            return
+        } else if (numInput.value == 2) {
+            this.style.cursor='not-allowed'
+        }
+        numInput.value--
+    }
+}

@@ -89,3 +89,107 @@
 }
 
 /* 左侧图片区 结束 */
+
+/* 右侧商品信息 开始 */
+.product .right {
+    width: 720px;
+}
+
+.product .right .title {
+    font-size: 26px;
+}
+
+.product .info {
+    margin-top: 20px;
+    padding: 20px 0;
+    background-color: #f0f0f0;
+}
+
+.product .info .label {
+    display: inline-block;
+    padding: 10px 20px 10px 10px;
+}
+
+.product .info .price .price-title {
+    font-size: 26px;
+    color: #CA141D;
+}
+
+.product .info .price span:last-child {
+    font-size: 14px;
+    color: #CA141D;
+    margin-left: 20px;
+}
+
+.sales span:nth-child(2) {
+    padding: 3px 5px;
+    border: 1px solid #CA141D;
+    color: #CA141D;
+}
+
+.sales span:nth-child(3) {
+    margin-left: 10px;
+}
+
+/* 属性选择 */
+.selected {
+    margin-top: 20px;
+}
+
+.product .right .selector {
+    margin-top: 20px;
+}
+
+.product .right .selector a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: 2px solid #f0f0f0;
+}
+
+.buy-box {
+    margin-top: 20px;
+}
+
+.buy-box .amount {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.buy-box input {
+    width: 28px;
+    height: 48px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.add, .reduce {
+    position: absolute;
+    right: 0;
+    width: 18px;
+    height: 23px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    text-align: center;
+    line-height: 23px;
+}
+
+.reduce {
+    top: 25px;
+    cursor: not-allowed;
+}
+
+.add-cart {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    margin-left: 50px;
+    background-color: #C81623;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-weight: 700;
+}
+/* 右侧商品信息 结束 */
