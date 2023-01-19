@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <router-view />
     <TarBar></TarBar>
   </div>
 </template>

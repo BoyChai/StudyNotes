@@ -10,7 +10,6 @@ import 'vant/lib/index.css';
 // 引入iconfont图标
 import '@/assets/iconfont/iconfont.css'
 
-
 // 注册组件
 Vue.use(Vant)
 
