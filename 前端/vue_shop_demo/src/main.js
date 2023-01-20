@@ -9,9 +9,17 @@ import Vant from 'vant'
 import 'vant/lib/index.css';
 // 引入iconfont图标
 import '@/assets/iconfont/iconfont.css'
-
+// 请求拦截
+import './api/mock'
+// 过滤器
+import * as filters from '@/filter'
+import vuexEsm from "vuex";
 // 注册组件
 Vue.use(Vant)
+// 注册Vues过滤器
+Object.keys(filters).forEach(key => {
+  Vue.filter(key,filters[key])
+})
 
 Vue.config.productionTip = false
 

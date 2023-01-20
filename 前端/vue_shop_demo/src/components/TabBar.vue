@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-tabbar route>
+    <van-tabbar active-color="#ee0a24" route>
       <van-tabbar-item  v-for="(tab,index) in tabs" :key="index" :icon="tab.icon" :to="tab.path">{{tab.name}}</van-tabbar-item>
     </van-tabbar>
   </div>
