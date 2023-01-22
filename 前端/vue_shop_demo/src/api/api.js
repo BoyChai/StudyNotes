@@ -7,3 +7,17 @@ export function getHome() {
         method:"get",
     });
 }
+
+//分类api
+export function getCategory(){
+    return request({
+        url:"category/index",
+        method:"get",
+    });
+}
+export function getCurrentCategory(id){
+    return request({
+        url:"category/info",
+        method:"get",
+    })
+}

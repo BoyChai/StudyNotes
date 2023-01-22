@@ -1,7 +1,7 @@
 <template>
   <div class="home-container">
     <!-- 搜索栏 -->
-    <van-search placeholder="搜索"></van-search>
+    <SearchBar></SearchBar>
     <van-swipe autoplay="3000" indicator-color="white">
       <van-swipe-item v-for="(banner,index) in homeInfos.banner" :key="index"  >
         <img :src="banner.url" style="height: 230px" >
@@ -81,7 +81,9 @@
 <script>
 import {getHome} from "@/api/api";
 import {priceFormat} from "@/filter";
+import SearchBar from "@/components/SearchBar.vue";
 export default {
+  components: {SearchBar,},
   name: "Home",
   data() {
     return{

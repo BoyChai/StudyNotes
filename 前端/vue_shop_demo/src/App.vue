@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view />
-    <TarBar></TarBar>
+    <TarBar v-if="$route.meta.showTab"></TarBar>
   </div>
 </template>
 
