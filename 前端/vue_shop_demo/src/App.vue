@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view />
+    <transition enter-active-class="animate__bounceInRight" mode="out-in">
+      <router-view />
+    </transition>
     <TarBar v-if="$route.meta.showTab"></TarBar>
   </div>
 </template>

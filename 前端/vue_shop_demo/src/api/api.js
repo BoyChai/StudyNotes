@@ -19,5 +19,15 @@ export function getCurrentCategory(id){
     return request({
         url:"category/info",
         method:"get",
+        data: {
+            id: id
+        },
+    })
+}
+
+export function getCart(){
+    return request({
+        url:"cart/index",
+        method:"get",
     })
 }

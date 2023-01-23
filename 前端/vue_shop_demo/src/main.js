@@ -14,6 +14,9 @@ import './api/mock'
 // 过滤器
 import * as filters from '@/filter'
 import vuexEsm from "vuex";
+
+// 动画
+import 'animate.css'
 // 注册组件
 Vue.use(Vant)
 // 注册Vues过滤器
