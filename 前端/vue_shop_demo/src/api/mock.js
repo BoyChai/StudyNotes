@@ -720,3 +720,4 @@ let cart = {
     "errmsg": "成功"
 };
 Mock.mock("https://api.boychai.xyz/v1/cart/index", cart);
+Mock.mock("https://api.boychai.xyz/v1/login",{"errno":0,"token":"adsfsadjfasddddddgdsavfdsfzdshsdjkf"});

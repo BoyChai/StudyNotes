@@ -25,9 +25,19 @@ export function getCurrentCategory(id){
     })
 }
 
+// 购物车
 export function getCart(){
     return request({
         url:"cart/index",
         method:"get",
+    })
+}
+
+//登录
+export function login(user) {
+    return request({
+        url:"login",
+        method:"post",
+        data:user
     })
 }
