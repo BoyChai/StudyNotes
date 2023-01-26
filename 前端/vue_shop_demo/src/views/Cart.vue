@@ -119,6 +119,7 @@ export default {
     },
     checkedAllChange() {
       if (this.checkedAll){
+        this.checkedGoods = []
         this.cartInfo.cartList.forEach(p => {
           this.checkedGoods.push(p.id)
         })
